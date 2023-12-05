@@ -1,0 +1,18 @@
+.container{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+h1{
+    text-align: center;
+}
+
+.container select,button{
+    width: 100%;
+}
+
+input{
+    width: 100%;
+    box-sizing: border-box;
+}

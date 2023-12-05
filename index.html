@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRC</title>
+    <link rel="icon" type="image/x-icon" href="./img/logo.png">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/dark.css">
+    <link rel="stylesheet" href="./index.css">
+    
+</head>
+<body>
+    <h1>CRC</h1>
+    <select name="" id="CRCvalue" onchange="VypsaniNk()">
+        <option value="3">CRC3</option>
+        <option value="4">CRC4</option>
+    </select>
+    <p id="vepsaniNk"></p>
+
+    <div class="container">
+        <div style="width: 40%;">
+            <h2>Kódování</h2>
+            
+            <p>Vstup <span id="lengthInput"></span></p>
+            <input type="text" required id="dataEncoding">
+
+            <p>Generující polynom</p>
+            <select id="polynoms">
+                  
+            </select>
+
+            <button onclick="encoding()">Zakódovat</button>
+
+            <div id="vystupVseho" style="display: none;">
+                <p id="textEncoding"></p>
+                <p id="dataEncodingOutput" ></p>
+                <p id="polynomEncodingOutput"></p>
+                <button onclick="copyOut()">Zkopírovat</button>
+            </div>            
+        </div>
+    
+        <div style="width: 40%;">
+            <h2>Dekódování</h2>
+            <p>Vstup</p>
+            <input type="text" required id="dataDecoding">
+
+            <p>Generující polynom</p>
+            <input type="text" required id="keyDecoding">
+
+            <button onclick="decoding()">Dekódovat</button>
+                <p id="textDecoding"></p>
+                <p id="dataDecodingOutput" ></p>
+                <p id="polynomDecodingOutput"></p>
+        </div>
+    </div>
+    
+    <script src="CRC.js"></script>
+</body>
+</html>
